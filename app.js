@@ -2,6 +2,7 @@
 
 
 var nameCapture = prompt('Whats your name?');
+alert('Welcome to my site ' + nameCapture);
 document.getElementById('thefeet').innerHTML = 'Welcome to my site ' + nameCapture + '.';
 
 var higherEducation = prompt('Do I have higher education?');
