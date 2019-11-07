@@ -43,5 +43,28 @@ if (jsExperience.toUpperCase() === 'YES'){
 }else{
     alert('Wrong! I do!');
 }
+
+var number;
+var counter = 1;
+
+while(number !== 39){
+    if (counter <= 4){
+        number = parseInt(prompt('How old am I?'));
+
+    if (number < 39 ){
+        alert('You guessed too low');
+        counter++
+    }else if( number > 39){
+        alert('You guessed too high');
+        counter++
+    }else if(number === NaN || number === null){
+        alert('please enter a real number');
+        counter++
+    } 
+    }else if(counter > 4){
+        alert('Too many guesses...')
+        break;
+    }
+}
 //console.log('Prev js experience:', jsExperience);
 
