@@ -50,21 +50,45 @@ var counter = 1;
 while(number !== 39){
     if (counter <= 4){
         number = parseInt(prompt('How old am I?'));
-
-    if (number < 39 ){
-        alert('You guessed too low');
-        counter++
-    }else if( number > 39){
-        alert('You guessed too high');
-        counter++
-    }else if(number === NaN || number === null){
-        alert('please enter a real number');
-        counter++
-    } 
+        if (number < 39 ){
+            alert('You guessed too low');
+            counter++;
+        }else if( number > 39){
+            alert('You guessed too high');
+            counter++;
+        }else if(number === NaN || number === null){
+            alert('please enter a real number');
+            counter++;
+        }
     }else if(counter > 4){
-        alert('Too many guesses...')
+        alert('Too many guesses...');
         break;
     }
+    //alert('Correct! I am 39!')
 }
 //console.log('Prev js experience:', jsExperience);
+
+var cities = ['madrid', 'miami', 'paris', 'berlin', 'seattle', 'washington'];
+var answer = prompt('Name a city I have visited!');
+var lastCounter = 1;
+var flag = false;
+
+while(lastCounter < 6){
+    var answer = prompt('Name a city I have visited!');
+    for(var i = 0; i < cities.length; i++){
+        if (answer === cities[i]){
+            alert('Nice job, I really like' + ' ' + cities[i]);
+            flag = true;
+            break;
+        }
+        if(flag === true){
+            break;
+        }else if(flag!==true){
+            lastCounter++;
+            alert('Wrong');
+        }
+    }
+}
+   //break;
+
 
